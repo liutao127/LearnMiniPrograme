@@ -1,4 +1,22 @@
 <!--pages/home/home.js.wxml-->
-<text class="title">Hello World!</text>
-<button size="mini">按钮</button>
-<image src=""></image>
+<!-- 1.小程序的数据绑定 -->
+<view>Hello {{name}}</view>
+<view>我的年龄： {{age}}</view>
+<view>我的年龄： {{age + 18}}</view>
+<view>我的年龄： {{age + "18"}}</view>
+
+<!-- 2. 列表展示 -->
+<view>{{students[0].name}}</view>
+<view>{{students[1].name}}</view>
+<view>{{students[2].name}}</view>
+<view>{{students[3].name}}</view>
+
+<view wx:for="{{students}}">{{item.name}}-{{item.age}}</view>
+
+<!-- 3. 时间监听改变data -->
+<view>当前计数： {{counter}}</view>
+<button bindtap="handleBtnClick" size="mini">+</button>
+<button bindtap="handleSubtraction" size="mini">-</button>
+
+
+
