@@ -1,0 +1,20 @@
+<!-- 1.基本使用 -->
+<text>Hello World\n</text>
+<text>你好  小程序！\n</text>
+
+<!-- 2.selectable: true -->
+<!-- 默认情况下text中的文本长按是不能选中的 -->
+<text selectable="{{true}}">Hello liutao\n</text>
+<text selectable>Hello liutao\n</text>
+
+<!-- 3.space: 决定文本空格的大小 -->
+<text>Hello World\n</text>
+<!-- nb: 根据字体设置空格大小   en: 半个中文字符  em：一个中文字符 -->
+<text space="nbsp">Hello World\n</text>
+<text space="ensp">Hello World\n</text>
+<text space="emsp">Hello World\n</text>
+
+<!-- 4. decode: 是否解码文本 -->
+<text decode="{{true}}">5 &gt; 3 \n</text>
+<text decode>5 &gt; 3</text>
+
