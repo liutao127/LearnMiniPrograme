@@ -1,6 +1,7 @@
 <!--pages/home/home.js.wxml-->
 <!-- 1.小程序的数据绑定 -->
 <view>Hello {{name}}</view>
+<view bindtap="handleViewClick">{{message}}</view>
 <view>我的年龄： {{age}}</view>
 <view>我的年龄： {{age + 18}}</view>
 <view>我的年龄： {{age + "18"}}</view>
@@ -11,12 +12,22 @@
 <view>{{students[2].name}}</view>
 <view>{{students[3].name}}</view>
 
-<view wx:for="{{students}}">{{item.name}}-{{item.age}}</view>
+<view wx:for="{{students}}" wx:key="key">{{item.name}}-{{item.age}}</view>
 
 <!-- 3. 时间监听改变data -->
 <view>当前计数： {{counter}}</view>
 <button bindtap="handleBtnClick" size="mini">+</button>
 <button bindtap="handleSubtraction" size="mini">-</button>
 
+<!-- 获取用户信息的方式 -->
+<view>
+  <button size="mini" 
+  open-type="getUserInfo"
+  bindgetuserinfo="handelGetUserInfo">获取授权</button>
+</view>
 
+<!-- 展示用户信息的方式 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
 
+<view wx:for="{{list}}" wx:key="key">{{item.title}}</view>
