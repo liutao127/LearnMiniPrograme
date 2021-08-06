@@ -1,0 +1,9 @@
+@import '/style/btn.wxss';
+
+.container{
+  color: green;
+  font-size: 25px;
+}
+.content{
+  background: orange ;
+}

@@ -1,0 +1,10 @@
+/* pages/wxml/wxml.wxss */
+.box{
+  font-size: 64rpx;
+}
+.isActive{
+  color: red;
+}
+.NisActive{
+  color: orange;
+}
